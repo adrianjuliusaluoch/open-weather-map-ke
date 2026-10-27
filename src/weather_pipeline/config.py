@@ -1,7 +1,6 @@
 # Settings and secrets, all read from environment variables
 import os
 from pathlib import Path
-
 from dotenv import load_dotenv
 
 load_dotenv()

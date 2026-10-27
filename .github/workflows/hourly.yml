@@ -2,8 +2,12 @@ name: hourly-weather
 
 on:
   schedule:
-    - cron: "0 * * * *"     # every hour, on the hour (UTC)
-  workflow_dispatch:         # also lets you run it by hand from GitHub
+    - cron: "0 * * * *" # every hour, on the hour (UTC)
+  workflow_dispatch: # also lets you run it by hand from GitHub
+
+concurrency:
+  group: weather-lakehouse
+  cancel-in-progress: false
 
 jobs:
   run:

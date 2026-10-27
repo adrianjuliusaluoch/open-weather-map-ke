@@ -2,7 +2,7 @@
 name = "weather-pipeline"
 version = "0.1.0"
 requires-python = ">=3.10"
-dependencies = ["pandas", "pyarrow", "requests", "boto3", "python-dotenv"]
+dependencies = ["pandas", "pyarrow", "requests", "boto3", "python-dotenv", "duckdb>=2.0"]
 
 [build-system]
 requires = ["setuptools"]

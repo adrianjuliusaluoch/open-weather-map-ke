@@ -1,15 +1,12 @@
 # Get current weather for each county by coordinates
 import time
-
 import pandas as pd
 import requests
-
 from . import config
 
 # Columns that can be missing; forcing float keeps every parquet file's types the same
 FLOAT_COLS = ["sea_level", "ground_level", "visibility", "wind_speed",
               "wind_degree", "wind_gust", "rain_1h"]
-
 
 def parse(row, data):
     # Pick the fields we keep from one API response
@@ -44,7 +41,6 @@ def parse(row, data):
         "sunset_time": pd.to_datetime(sys_info.get("sunset"), unit="s", utc=True),
     }
 
-
 def get_weather(row):
     # One call per county, retried if the API is busy
     params = {"lat": row.latitude, "lon": row.longitude,
@@ -63,7 +59,6 @@ def get_weather(row):
         time.sleep(2 ** (attempt + 1))
     print(f"{row.county}: gave up after {config.MAX_TRIES} tries")
     return None
-
 
 def fetch_all(counties):
     # Loop over all counties, one at a time, gently

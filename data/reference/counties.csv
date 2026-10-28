@@ -1,0 +1,48 @@
+county,town_asked,found_name,found_state,latitude,longitude,in_kenya,state_matches
+Baringo,Kabarnet,Kabarnet,Baringo County,0.4919,35.743,True,True
+Bomet,Bomet,Bomet,Bomet,-0.7814456,35.3434879,True,True
+Bungoma,Bungoma,Bungoma,Bungoma County,0.5705402,34.5603258,True,True
+Busia,Busia,Busia,Busia County,0.4608,34.1115,True,True
+Elgeyo-Marakwet,Iten,Iten,Elgeyo-Marakwet County,0.6730702,35.5102633,True,True
+Embu,Embu,Embu,Embu,-0.5376699,37.4583949,True,True
+Garissa,Garissa,Garissa,Garissa,-0.4567099,39.6404713,True,True
+Homa Bay,Homa Bay,Homa Bay,Homa Bay County,-0.530371,34.451983,True,True
+Isiolo,Isiolo,Isiolo,Isiolo,0.35,37.583303,True,True
+Kajiado,Kajiado,Kajiado,,-1.84592,36.789178,True,False
+Kakamega,Kakamega,Kakamega,Kakamega County,0.2833,34.75,True,True
+Kericho,Kericho,Kericho,Kericho County,-0.3666,35.2833,True,True
+Kiambu,Kiambu,Kiambu,Kiambu,-1.1663925,36.8252791,True,True
+Kilifi,Kilifi,Kilifi,Kilifi County,-3.6333,39.85,True,True
+Kirinyaga,Kerugoya,Kerugoya,Kirinyaga County,-0.49633,37.278584,True,True
+Kisii,Kisii,Kisii,Kisii County,-0.6694119,34.7677944,True,True
+Kisumu,Kisumu,Kisumu,Kisumu County,-0.1029109,34.7541761,True,True
+Kitui,Kitui,Kitui,Kitui County,-1.3666,38.0166,True,True
+Kwale,Kwale,Kwale,Kwale,-4.1746877,39.45267,True,True
+Laikipia,Nanyuki,Nanyuki,Laikipia County,0.01403,37.074632,True,True
+Lamu,Lamu,Lamu,Lamu,-2.2675396,40.9010641,True,True
+Machakos,Machakos,Machakos,Machakos County,-1.5212477,37.2660878,True,True
+Makueni,Makueni,Makueni,Makueni,-1.8,37.6166,True,True
+Mandera,Mandera,Mandera,Mandera County,3.9384208,41.8573239,True,True
+Marsabit,Marsabit,Marsabit,Marsabit County,2.3380612,37.991639,True,True
+Meru,Meru,Meru,Meru County,0.0499786,37.6500063,True,True
+Migori,Migori,Migori,Migori County,-1.0666,34.4666,True,True
+Mombasa,Mombasa,Mombasa,Mombasa County,-4.05052,39.667169,True,True
+Murang'a,Murang'a,Murang'a,Murang'a County,-0.7236564,37.1575858,True,True
+Nairobi,Nairobi,Nairobi,Nairobi County,-1.30326415,36.826384099341595,True,True
+Nakuru,Nakuru,Nakuru,Nakuru,-0.2802724,36.0712048,True,True
+Nandi,Kapsabet,Kapsabet,Nandi County,0.2004978,35.1011501,True,True
+Narok,Narok,Narok,,-1.0886931,35.8714916,True,False
+Nyamira,Nyamira,Nyamira,Nyamira County,-0.566595,34.9357117,True,True
+Nyandarua,Ol Kalou,Ol Kalou,Nyandarua,-0.2672966,36.378065,True,True
+Nyeri,Nyeri,Nyeri,Nyeri,-0.4192962,36.9517005,True,True
+Samburu,Maralal,Maralal,Samburu,1.1,36.7,True,True
+Siaya,Siaya,Siaya,Siaya County,0.0593318,34.2835138,True,True
+Taita-Taveta,Voi,Voi,Taita–Taveta,-3.3976842,38.584327,True,True
+Tana River,Hola,Hola,Tana River County,-1.4976808,40.034911,True,True
+Tharaka-Nithi,Chuka,Chuka,Tharaka-Nithi,-0.3332938,37.6500021,True,True
+Trans Nzoia,Kitale,Kitale,Trans-Nzoia County,1.018076,35.000236,True,True
+Turkana,Lodwar,Lodwar,Turkana County,3.1166086,35.6000028,True,True
+Uasin Gishu,Eldoret,Eldoret,Uasin Gishu County,0.5198329,35.2715481,True,True
+Vihiga,Vihiga,Vihiga,Vihiga County,0.0471584,34.7194831,True,True
+Wajir,Wajir,Wajir,Wajir County,1.7504651,40.0594959,True,True
+West Pokot,Kapenguria,Kapenguria,West Pokot,1.2522515,35.0909919,True,True

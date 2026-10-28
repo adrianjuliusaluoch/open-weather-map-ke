@@ -1,4 +1,4 @@
-name: hourly-weather
+name: Hourly Weather Run
 
 on:
   workflow_dispatch: # triggered by cron-job.org (or by hand from the Actions tab)

@@ -5,6 +5,14 @@ import duckdb
 
 from . import config
 
+# Columns kept in the lakehouse table (raw files keep everything, so nothing is lost)
+COLUMNS = [
+    "county", "latitude", "longitude", "place_name", "country_code", "observed_at",
+    "weather_id", "weather_main", "weather_description", "temperature", "feels_like",
+    "pressure", "humidity", "ground_level", "visibility", "wind_speed", "wind_degree",
+    "wind_gust", "cloudiness", "rain_1h", "ingested_at",
+]
+
 CREATE_TABLE = """
     create table if not exists weather_lake.weather_observations (
         county varchar,
@@ -18,11 +26,8 @@ CREATE_TABLE = """
         weather_description varchar,
         temperature double,
         feels_like double,
-        temp_min double,
-        temp_max double,
         pressure bigint,
         humidity bigint,
-        sea_level double,
         ground_level double,
         visibility double,
         wind_speed double,
@@ -30,8 +35,6 @@ CREATE_TABLE = """
         wind_gust double,
         cloudiness bigint,
         rain_1h double,
-        sunrise_time timestamptz,
-        sunset_time timestamptz,
         ingested_at timestamptz,
         source_file varchar
     )
@@ -75,9 +78,10 @@ def load(parquet_path):
     if already:
         print(f"already loaded, skipping {name}")
     else:
+        columns = ", ".join(COLUMNS)
         con.execute(f"""
-            insert into weather_lake.weather_observations by name
-            select *, '{name}' as source_file
+            insert into weather_lake.weather_observations ({columns}, source_file)
+            select {columns}, '{name}' as source_file
             from read_parquet('{Path(parquet_path).as_posix()}')
         """)
         print(f"loaded {name} into the lakehouse")

@@ -1,12 +1,10 @@
 name: hourly-weather
 
 on:
-  schedule:
-    - cron: "0 * * * *" # every hour, on the hour (UTC)
-  workflow_dispatch: # also lets you run it by hand from GitHub
+  workflow_dispatch: # triggered by cron-job.org (or by hand from the Actions tab)
 
 concurrency:
-  group: weather-lakehouse
+  group: weather-lakehouse # never run two at once
   cancel-in-progress: false
 
 jobs:
@@ -26,3 +24,4 @@ jobs:
           B2_KEY_ID: ${{ secrets.B2_KEY_ID }}
           B2_APP_KEY: ${{ secrets.B2_APP_KEY }}
           B2_BUCKET: ${{ secrets.B2_BUCKET }}
+          PG_CATALOG: ${{ secrets.PG_CATALOG }}

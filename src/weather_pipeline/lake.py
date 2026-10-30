@@ -58,7 +58,11 @@ def connect(read_only=False):
     """)
 
     # limit 0 = always write real parquet files in the bucket
-    options = f"data_path 's3://{config.B2_BUCKET}/lake/', data_inlining_row_limit 0"
+    # own folder in the bucket and own catalog schema, so projects stay separate
+    options = (
+        f"data_path 's3://{config.B2_BUCKET}/lake/weather/', "
+        "metadata_schema 'weather', data_inlining_row_limit 0"
+    )
     if read_only:
         options += ", read_only"
     con.execute(f"attach 'ducklake:postgres:{config.PG_CATALOG}' as weather_lake ({options})")
